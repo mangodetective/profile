@@ -1,0 +1,181 @@
+/* ========================= */
+/* 헤더 영역 (배경 이미지 + 제목) */
+/* ========================= */
+header {
+  background-color: floralwhite;
+  width: 100%;
+  height: 10%;
+  background-image: url(./media/pic_2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  line-height: 10vh; /* 텍스트 수직 정렬용 */
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  color: black;
+  margin: 0.67em 0;
+  text-shadow:
+    1px 0 white, -1px 0 white, 0 1px white, 0 -1px white,
+    1px 1px white, 1px -1px white, -1px 1px white, -1px -1px white,
+    2px 0 aqua, -2px 0 aqua, 0 2px aqua, 0 -2px aqua,
+    2px 1px aqua, -2px 1px aqua, 1px 2px aqua, 1px -2px aqua,
+    2px -1px aqua, -2px -1px aqua, -1px 2px aqua, -1px -2px aqua,
+    2px 2px aqua, 2px -2px aqua, -2px 2px aqua, -2px -2px aqua;
+}
+
+/* ========================= */
+/* 내비게이션 바 스타일 */
+/* ========================= */
+nav {
+  width: 100%;
+  background-color: gainsboro;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 3rem;
+  margin: 0.3rem;
+  font-size: 1.5rem;
+  background-color: lightslategray;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* ========================= */
+/* 페이지 전체 레이아웃 */
+/* ========================= */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ========================= */
+/* 섹션 공통 레이아웃 설정 */
+/* ========================= */
+.overview, .education, .projects {
+  max-width: 800px;
+  width: 100%;
+  background: white;
+  margin: 1rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+/* ========================= */
+/* overview 섹션 내 프로필 + 소개 수평 정렬 */
+/* ========================= */
+.overview {
+  display: flex;
+  align-items: center; /* 세로 중앙 정렬 */
+  gap: 2rem;
+}
+
+/* ========================= */
+/* 프로필 이미지 스타일 */
+/* ========================= */
+.profile-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ========================= */
+/* 소개 정보 텍스트 스타일 */
+/* ========================= */
+.contact {
+  flex: 1;
+}
+
+.contact h2 {
+  margin-top: 0;
+}
+
+.contact-item {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.label {
+  width: 150px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.contact a {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+  color: black;
+}
+
+/* ========================= */
+/* 리스트 기본 설정 */
+/* ========================= */
+ul, ol {
+  padding-inline-start: 40px;
+  margin: 1em 0;
+}
+
+/* ========================= */
+/* 프로젝트 테이블 스타일 */
+/* ========================= */
+.project-table {
+  border-collapse: collapse;
+  border: 2px solid #333;
+}
+
+.project-table td {
+  border: 1px solid #666;
+  width: 10vw;
+  padding: 1rem;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+.project-table img {
+  width: 10vw;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+/* ========================= */
+/* 고정된 하단 꼬리말 영역 */
+/* ========================= */
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+  color: #333;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  border-top: 1px solid #ccc;
+  z-index: 1000; /* 다른 요소 위로 표시 */
+}
+
+/* ========================= */
+/* 기타 이미지 기본 설정 (필요시 유지) */
+/* ========================= */
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
